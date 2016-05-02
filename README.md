@@ -13,11 +13,6 @@ Apache Web Server and PHP Engine
     mkdir -p /app/apache2/logs /app/apache2/vhost /app/apache2/www
 
 
-**Set a default vHost**
-
-    cp 000-default.conf /app/apache2/vhost
-
-
 **Set demo contents**
 
     cp index.html info.php /app/apache2/www
@@ -28,7 +23,7 @@ Apache Web Server and PHP Engine
     docker run -d --name apache-php \
     -v /app/apache2/logs:/var/log/apache2 \
     -v /app/apache2/vhost:/etc/apache2/vhosts \
-    -v /app/apache2/www:/var/www \
+    -v /app/apache2/www:/var/www/html \
     -p 80:80 \
     apache-php
 
@@ -39,5 +34,6 @@ http://hostname-ip
 
 **Test PHP**  
 http://hostname-ip/info.php
+
 
 > Written with [StackEdit](https://stackedit.io/).
