@@ -1,9 +1,11 @@
+
+
 Apache Web Server and PHP Engine
 --------------------------------
-**Apache shared folders**
-*/app/apache2/logs*		>> Apache Logs
-*/app/apache2/vhost*	>> vHost Configuration
-*/app/apache2/www*	>> Document root for HTML or PHP pages
+**Apache shared folders**  
+*/app/apache2/logs*		>> Apache Logs  
+*/app/apache2/vhost*	>> vHost Configuration  
+*/app/apache2/www*	>> Document root for HTML or PHP pages  
 
 
 **Create host folders**
@@ -13,12 +15,12 @@ Apache Web Server and PHP Engine
 
 **Run container**
 
-    docker run -d --name apache-php-proxy \
+    docker run -d --name apache-php\
     -v /app/apache2/logs:/var/log/apache2 \
     -v /app/apache2/vhost:/etc/apache2/sites-enabled \
     -v /app/apache2/www:/var/www \
     -p 80:80 \
-    apache-php-proxy
+    apache-php
 
 
 **Set a default vHost**
@@ -26,5 +28,7 @@ Apache Web Server and PHP Engine
     cp 000-default.conf /app/apache2/vhost
 
 
-**Connect to Apache web server**
+**Connect to Apache web server**  
 http://hostname-ip
+
+> Written with [StackEdit](https://stackedit.io/).
