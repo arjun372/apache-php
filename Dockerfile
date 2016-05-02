@@ -10,7 +10,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 # vHost server settings
 RUN mkdir /etc/apache2/vhosts && \
     echo "IncludeOptional vhosts/*.conf" >> /etc/apache2/apache2.conf && \
-    echo "ServerName localhost" >> /etc/apache2/apache2.conf \
+    echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Enable mod_rewrite
 RUN /usr/sbin/a2enmod rewrite
