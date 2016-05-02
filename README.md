@@ -1,14 +1,14 @@
 Apache Web Server and PHP Engine
 --------------------------------
-**Apache shared folders**  
-*/app/apache2/logs*		>> Apache Logs  
-*/app/apache2/vhost*	>> vHost Configuration  
-*/app/apache2/www*		>> Document root for HTML or PHP pages  
+**Apache shared folders**
+*/app/apache2/logs*		>> Apache Logs
+*/app/apache2/vhost*	>> vHost Configuration
+*/app/apache2/www*	>> Document root for HTML or PHP pages
 
 
 **Create host folders**
 
-    mkdir -p /app/apache2/logs /app/apache2/vhost /app/apache2/www  
+    mkdir -p /app/apache2/logs /app/apache2/vhost /app/apache2/www
 
 
 **Run container**
@@ -18,8 +18,13 @@ Apache Web Server and PHP Engine
     -v /app/apache2/vhost:/etc/apache2/sites-enabled \
     -v /app/apache2/www:/var/www \
     -p 80:80 \
-    apache-php-proxy  
+    apache-php-proxy
 
 
-**Connect to Apache web server**  
+**Set a default vHost**
+
+    cp 000-default.conf /app/apache2/vhost
+
+
+**Connect to Apache web server**
 http://hostname-ip

@@ -7,8 +7,10 @@ ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 
-COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
+# vHost folder setting
+RUN mkdir /etc/apache2/vhosts && echo "IncludeOptional vhosts/*.conf" >> /etc/apache2.conf
 
+# Enable mod_rewrite
 RUN /usr/sbin/a2enmod rewrite
 
 EXPOSE 80
