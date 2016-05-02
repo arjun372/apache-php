@@ -3,9 +3,9 @@
 Apache Web Server and PHP Engine
 --------------------------------
 **Apache shared folders**  
-*/app/apache2/logs*		>> Apache Logs  
-*/app/apache2/vhost*	>> vHost Configuration  
-*/app/apache2/www*	>> Document root for HTML or PHP pages  
+*/app/apache2/logs*       >> Apache Logs  
+*/app/apache2/vhost*     >> vHost Configuration  
+*/app/apache2/www*	  >> Document root for HTML or PHP pages  
 
 
 **Create host folders**
