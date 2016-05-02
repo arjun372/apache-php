@@ -8,7 +8,7 @@ ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 
 # vHost folder setting
-RUN mkdir /etc/apache2/vhosts && echo "IncludeOptional vhosts/*.conf" >> /etc/apache2.conf
+RUN mkdir /etc/apache2/vhosts && echo "IncludeOptional vhosts/*.conf" >> /etc/apache2/apache2.conf
 
 # Enable mod_rewrite
 RUN /usr/sbin/a2enmod rewrite
