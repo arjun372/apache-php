@@ -18,5 +18,5 @@ Apache Web Server and PHP Engine
     -p 80:80 \
     apache-php-proxy
 
-**Connect to Apache web server**
+**Connect to Apache web server**  
 http://hostname-ip
