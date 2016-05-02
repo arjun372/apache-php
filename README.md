@@ -15,7 +15,7 @@ Apache Web Server and PHP Engine
 
 **Run container**
 
-    docker run -d --name apache-php\
+    docker run -d --name apache-php \
     -v /app/apache2/logs:/var/log/apache2 \
     -v /app/apache2/vhost:/etc/apache2/vhosts \
     -v /app/apache2/www:/var/www \
