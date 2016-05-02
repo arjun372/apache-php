@@ -18,6 +18,11 @@ Apache Web Server and PHP Engine
     cp 000-default.conf /app/apache2/vhost
 
 
+**Set demo contents**
+
+    cp index.html info.php /app/apache2/www
+
+
 **Run container**
 
     docker run -d --name apache-php \
@@ -28,12 +33,11 @@ Apache Web Server and PHP Engine
     apache-php
 
 
-**Set a default vHost**
-
-    cp 000-default.conf /app/apache2/vhost
-
-
 **Connect to Apache web server**  
-http://hostname-ip
+http://hostname-ip  
+
+
+**Test PHP**  
+http://hostname-ip/info.php
 
 > Written with [StackEdit](https://stackedit.io/).
