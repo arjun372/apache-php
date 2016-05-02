@@ -13,6 +13,11 @@ Apache Web Server and PHP Engine
     mkdir -p /app/apache2/logs /app/apache2/vhost /app/apache2/www
 
 
+**Set a default vHost**
+
+    cp 000-default.conf /app/apache2/vhost
+
+
 **Run container**
 
     docker run -d --name apache-php \
