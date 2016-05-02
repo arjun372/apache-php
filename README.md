@@ -10,12 +10,12 @@ Apache Web Server and PHP Engine
 
 **Create host folders**
 
-    mkdir -p /app/apache2/logs /app/apache2/vhost /app/apache2/www
+    mkdir -p /app/apache2/logs /app/apache2/vhost /app/apache2/www  
 
 
 **Set demo contents**
 
-    cp index.html info.php /app/apache2/www
+    cp index.html info.php /app/apache2/www  
 
 
 **Run container**
@@ -25,7 +25,7 @@ Apache Web Server and PHP Engine
     -v /app/apache2/vhost:/etc/apache2/vhosts \
     -v /app/apache2/www:/var/www/html \
     -p 80:80 \
-    apache-php
+    apache-php  
 
 
 **Connect to Apache web server**  
